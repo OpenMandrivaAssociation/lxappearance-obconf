@@ -26,7 +26,7 @@ It is only visible when the plugin is installed and Openbox is in use.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure --disable-static
