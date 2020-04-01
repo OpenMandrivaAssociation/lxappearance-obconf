@@ -3,12 +3,12 @@
 Summary:        Plugin to configure OpenBox inside LXAppearance
 Name:           lxappearance-obconf
 Epoch:		1
-Version:        0.2.2
+Version:        0.2.3
 Release:        1
 Group:          Graphical desktop/Other
 License:        GPLv2+
 Url:            http://lxde.org/
-Source0:        %{name}-%{version}.tar.xz
+Source0:        hhttps://sourceforge.net/projects/lxde/files/LXAppearance%20Obconf/%{name}-%{version}.tar.xz
 BuildRequires:  gettext
 BuildRequires:  intltool
 BuildRequires:  libtool
@@ -30,10 +30,10 @@ It is only visible when the plugin is installed and Openbox is in use.
 
 %build
 %configure --disable-static
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 %find_lang %{name}
 
 %files -f %{name}.lang
