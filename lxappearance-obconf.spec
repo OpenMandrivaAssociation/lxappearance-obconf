@@ -15,7 +15,7 @@ Version:        0.2.3
 Release:        2
 Group:          Graphical desktop/Other
 License:        GPLv2+
-Url:            http://lxde.org/
+Url:            https://lxde.org/
 #Source0:        hhttps://sourceforge.net/projects/lxde/files/LXAppearance%20Obconf/%{name}-%{version}.tar.xz
 Source0:		https://github.com/lxde/lxappearance-obconf/archive/%{?snapshot:%{commit}}%{!?snapshot:%{version}}/%{name}-%{?snapshot:%{commit}}%{!?snapshot:%{version}}.tar.gz
 
