@@ -2,7 +2,7 @@
 %define _disable_ld_no_undefined 1
 
 # git snapshot
-%global snapshot 1
+#global snapshot 1
 %if 0%{?snapshot}
 	%global commit		b3e2dc866a670919991c53ecf37b971b2a6e8899
 	%global commitdate	20241011
@@ -11,8 +11,8 @@
 
 Summary:        Plugin to configure OpenBox inside LXAppearance
 Name:           lxappearance-obconf
-Version:        0.2.3
-Release:        3
+Version:        0.2.4
+Release:        1
 Group:          Graphical desktop/Other
 License:        GPLv2+
 Url:            https://lxde.org/
