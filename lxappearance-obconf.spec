@@ -49,7 +49,6 @@ It is only visible when the plugin is installed and Openbox is in use.
 %autosetup -p1 -n %{name}-%{?snapshot:%{commit}}%{!?snapshot:%{version}}
 
 %build
-export LDFLAGS="%{ldflags} `pkg-config --libs x11` `pkg-config --libs lxappearance`"
 autoreconf -fiv
 %configure \
 	--disable-silent-rules \
