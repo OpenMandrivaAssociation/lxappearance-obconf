@@ -31,6 +31,7 @@ BuildRequires:	openbox
 #BuildRequires:  pkgconfig(gtk+-x11-3.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(lxappearance)
+BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(obrender-3.5)
 BuildRequires:  pkgconfig(obt-3.5)
@@ -55,6 +56,8 @@ It is only visible when the plugin is installed and Openbox is in use.
 
 %build
 autoreconf -fiv
+# Loaded by lxappearance, which provides lxappearance_changed. X11 still links.
+export LDFLAGS="%{build_ldflags} -lX11 -Wl,--allow-shlib-undefined"
 %configure \
 	--disable-silent-rules \
 	--enable-gtk3 \
