@@ -12,7 +12,7 @@
 Summary:        Plugin to configure OpenBox inside LXAppearance
 Name:           lxappearance-obconf
 Version:        0.2.4
-Release:        1
+Release:        2
 Group:          Graphical desktop/Other
 License:        GPLv2+
 Url:            https://lxde.org/
