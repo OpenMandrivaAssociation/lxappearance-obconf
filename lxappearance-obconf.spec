@@ -53,6 +53,8 @@ It is only visible when the plugin is installed and Openbox is in use.
 
 %prep
 %autosetup -p1 -n %{name}-%{?snapshot:%{commit}}%{!?snapshot:%{version}}
+# The plugin is loaded by lxappearance, which provides lxappearance_changed.
+sed -i 's/ -no-undefined//g' src/Makefile.am src/Makefile.in 2>/dev/null || sed -i 's/ -no-undefined//g' src/Makefile.am
 
 %build
 autoreconf -fiv
